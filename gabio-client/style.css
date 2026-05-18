@@ -1,0 +1,172 @@
+/* === RESET E BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+/* === CONTAINER PRINCIPAL === */
+.container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 560px;
+    height: fit-content;
+}
+
+/* === CABEÇALHO === */
+.header {
+    text-align: center;
+    margin-bottom: 32px;
+    border-bottom: 2px solid #0057b8;
+    padding-bottom: 20px;
+}
+
+.header h1 {
+    color: #0057b8;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.header p {
+    color: #666;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* === STATUS DA CONEXÃO === */
+.connection-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    margin-bottom: 24px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.connection-status.connected {
+    background-color: #d1e7dd;
+    color: #0a3622;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffc107;
+}
+
+.connection-status.connected .status-dot {
+    background-color: #198754;
+}
+
+/* === FORMULÁRIO === */
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #0057b8;
+}
+
+/* === CAMPO DESTINO (esconde quando não é transferência) === */
+#toAccountGroup {
+    display: none;
+}
+
+#toAccountGroup.visible {
+    display: block;
+}
+
+/* === BOTÃO === */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0057b8;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 8px;
+}
+
+button:hover {
+    background-color: #003f8a;
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+/* === ÁREA DE RESPOSTA === */
+.response {
+    margin-top: 28px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.response h3 {
+    color: #0057b8;
+    margin-bottom: 14px;
+    font-size: 16px;
+}
+
+.response p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.response span {
+    color: #0057b8;
+    font-weight: bold;
+}
+
+/* STATUS OK = verde, ERROR = vermelho */
+#resStatus.ok {
+    color: #198754;
+}
+
+#resStatus.error {
+    color: #dc3545;
+}
